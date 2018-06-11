@@ -94,7 +94,7 @@ module SitemapGenerator
 
     # Full URL of the file.
     def url
-      URI.join(host, sitemaps_path.to_s, filename.to_s).to_s
+      URI.join(URI.escape(host), sitemaps_path.to_s, filename.to_s).to_s
     end
 
     # Return the size of the file at <tt>path</tt>
